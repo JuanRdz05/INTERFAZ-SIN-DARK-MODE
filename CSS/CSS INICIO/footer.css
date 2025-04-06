@@ -1,0 +1,236 @@
+/* ===== FOOTER MEJORADO ===== */
+footer {
+    background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
+    color: #ffffff;
+    padding: 3rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #2196F3);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container h2 {
+    color: #a5d6a7;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #4CAF50;
+}
+
+/* Tarjeta del footer */
+.tarjeta-footer {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+}
+
+.tarjeta-contenido-footer {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.tarjeta-texto-footer {
+    flex: 1;
+}
+
+.tarjeta-texto-footer h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.tarjeta-texto-footer h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #4CAF50;
+}
+
+.tarjeta-texto-footer p {
+    color: #ecf0f1;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.tarjeta-texto-footer i {
+    color: #4CAF50;
+    width: 20px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.tarjeta-imagen-footer {
+    flex: 0 0 45%;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-imagen-footer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tarjeta-imagen-footer:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-imagen-footer:hover img {
+    transform: scale(1.05);
+}
+
+/* Botón WhatsApp mejorado */
+.boton-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-whatsapp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.boton-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.boton-whatsapp:hover::before {
+    left: 100%;
+}
+
+.boton-whatsapp i {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+/* Copyright mejorado */
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    position: relative;
+}
+
+.copyright::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: #4CAF50;
+}
+
+/* Efecto de patrón decorativo */
+footer::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%234CAF50" opacity="0.05"><circle cx="25" cy="25" r="5"/><circle cx="75" cy="25" r="5"/><circle cx="25" cy="75" r="5"/><circle cx="75" cy="75" r="5"/></svg>');
+    background-size: 50px 50px;
+    z-index: 0;
+}
+
+/* ===== VERSIÓN MÓVIL ===== */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 5%;
+    }
+    
+    .tarjeta-contenido-footer {
+        flex-direction: column;
+    }
+    
+    .tarjeta-imagen-footer {
+        order: -1;
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+    
+    .tarjeta-texto-footer {
+        text-align: center;
+    }
+    
+    .tarjeta-texto-footer h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .boton-whatsapp {
+        width: 100%;
+    }
+    
+    footer::after {
+        display: none;
+    }
+}

@@ -1,0 +1,544 @@
+/* ===== ESTILOS BASE - CONSISTENTES CON VACUNACIÓN ===== */
+:root {
+    --color-primary: #4CAF50;
+    --color-secondary: #2196F3;
+    --color-dark: #2c3e50;
+    --color-light: #f5f9fa;
+    --text-color: #333;
+    --spacing: 1.5rem;
+}
+
+/* ===== ESTRUCTURA PRINCIPAL - MANTIENE ESTILOS ORIGINALES ===== */
+main {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background: linear-gradient(135deg, var(--color-light) 0%, #e6f2f5 100%);
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+#contenido {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-top: 2rem;
+}
+
+.contenido-vacunacion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== ENCABEZADO - ESTILOS COHERENTES ===== */
+.encab-vacunacion {
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.encab-vacunacion h1 {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin: 0 auto 0.5rem;
+    position: relative;
+    display: block;
+    width: fit-content;
+}
+
+.encab-vacunacion h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+.encab-vacunacion h2 {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    font-weight: 400;
+    margin: 1rem auto 0;
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding: 0 2rem;
+}
+
+.encab-vacunacion h2::before,
+.encab-vacunacion h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+    background: var(--color-primary);
+}
+
+.encab-vacunacion h2::before {
+    left: 0;
+}
+
+.encab-vacunacion h2::after {
+    right: 0;
+}
+
+/* ===== COMPONENTES ESPECÍFICOS PARA MEDICINA INTERNA ===== */
+
+/* Icono decorativo */
+.icono-decorativo {
+    text-align: center;
+    margin: 0 auto 2rem;
+}
+
+.icono-decorativo i {
+    font-size: 3.5rem;
+    color: var(--color-primary);
+    background: rgba(76, 175, 80, 0.1);
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.icono-decorativo:hover i {
+    color: var(--color-secondary);
+    transform: rotate(15deg);
+}
+
+/* Párrafo introductorio */
+.intro-vacunacion {
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+    background: rgba(76, 175, 80, 0.03);
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--color-primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.intro-vacunacion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.15);
+    border-left-color: var(--color-secondary);
+}
+
+.icono-destacado {
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.intro-vacunacion:hover .icono-destacado {
+    color: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+/* Contenedor de servicios - Grid mejorado */
+.contenido-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Tarjetas de servicios - Estilo consistente con vacunación */
+.servicios {
+    background: white;
+    border-radius: 10px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.servicios:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.15);
+    border-left-color: var(--color-secondary);
+}
+
+.servicios h4 {
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.servicios:hover h4 {
+    color: var(--color-secondary);
+}
+
+.servicios h4 i {
+    margin-right: 12px;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.servicios:hover h4 i {
+    color: var(--color-secondary);
+}
+
+/* Listas de servicios */
+.servicios ul {
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.servicios li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.8rem;
+    line-height: 1.7;
+}
+
+.servicios li::before {
+    content: '•';
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    transition: all 0.3s ease;
+}
+
+.servicios:hover li::before {
+    color: var(--color-secondary);
+}
+
+.servicios li b {
+    color: var(--color-dark);
+    transition: all 0.3s ease;
+}
+
+.servicios:hover li b {
+    color: var(--color-secondary);
+}
+
+/* Sección "Por qué elegirnos" */
+.contenido-porque-servicios {
+    margin: 2.5rem 0;
+}
+
+.porque-servicios {
+    background: white;
+    border-radius: 10px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.porque-servicios:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.15);
+    border-top-color: var(--color-secondary);
+}
+
+.porque-servicios h4 {
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.porque-servicios:hover h4 {
+    color: var(--color-secondary);
+}
+
+.porque-servicios h4 i {
+    margin-right: 12px;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.porque-servicios:hover h4 i {
+    color: var(--color-secondary);
+}
+
+/* Preguntas frecuentes */
+.contenedor-preguntas {
+    margin: 2.5rem 0;
+}
+
+.contenedor-preguntas h4 {
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.contenedor-preguntas:hover h4 {
+    border-bottom-color: var(--color-secondary);
+}
+
+.preguntas {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--color-primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.preguntas:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.15);
+    border-left-color: var(--color-secondary);
+}
+
+.preguntas h5 {
+    margin-top: 0;
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.preguntas:hover h5 {
+    color: var(--color-secondary);
+}
+
+.preguntas h5 i {
+    margin-right: 12px;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.preguntas:hover h5 i {
+    color: var(--color-secondary);
+}
+
+.preguntas p {
+    padding-left: 2rem;
+    margin-top: 0.8rem;
+    color: #555;
+}
+
+/* Botón de CTA */
+.centrar-boton {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.boton-consulta {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.boton-consulta:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.boton-consulta i {
+    transition: all 0.3s ease;
+}
+
+.boton-consulta:hover i {
+    transform: rotate(10deg);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+    }
+    
+    #contenido {
+        padding: 1.5rem;
+    }
+    
+    .encab-vacunacion h1 {
+        font-size: 2rem;
+    }
+    
+    .encab-vacunacion h2 {
+        font-size: 1.2rem;
+        padding: 0 1.5rem;
+    }
+    
+    .encab-vacunacion h2::before,
+    .encab-vacunacion h2::after {
+        width: 20px;
+    }
+    
+    .intro-vacunacion {
+        padding-left: 3.5rem;
+    }
+    
+    .icono-destacado {
+        font-size: 1.5rem;
+        left: 1rem;
+    }
+    
+    .icono-decorativo i {
+        font-size: 2.5rem;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+    
+    .contenido-servicios {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== ANIMACIONES PARA MEDICINA INTERNA ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animación para encabezados */
+.encab-vacunacion {
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.encab-vacunacion h2 {
+    animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+/* Animación para icono decorativo */
+.icono-decorativo {
+    animation: fadeIn 0.8s ease-out 0.5s both;
+}
+
+/* Animación para párrafo introductorio */
+.intro-vacunacion {
+    animation: fadeInUp 0.8s ease-out 0.7s both;
+}
+
+/* Animación para contenedor de servicios */
+.contenido-servicios {
+    animation: fadeIn 0.8s ease-out 0.9s both;
+}
+
+/* Animación para tarjetas de servicios */
+.servicios {
+    animation: scaleIn 0.6s ease-out both;
+}
+
+/* Retrasos escalonados para tarjetas */
+.servicios:nth-child(1) { 
+    animation-delay: 0.2s; 
+}
+.servicios:nth-child(2) { 
+    animation-delay: 0.3s; 
+}
+
+/* Animación para títulos de servicios */
+.servicios h4 {
+    animation: fadeInLeft 0.6s ease-out both;
+}
+
+/* Retrasos para títulos (0.1s después de la tarjeta) */
+.servicios:nth-child(1) h4 { 
+    animation-delay: 0.2s; 
+}
+.servicios:nth-child(2) h4 { 
+    animation-delay: 0.2s; 
+}
+
+/* Animación para iconos */
+.icono-destacado {
+    animation: fadeIn 0.6s ease-out 0.8s both;
+}
+
+/* Nueva animación para entrada desde la izquierda */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Efecto para evitar parpadeo inicial */
+body.loaded * {
+    animation-play-state: running !important;
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.icono-decorativo {
+    animation: float 3s ease-in-out infinite 0.5s both, fadeIn 0.8s ease-out 0.5s both;
+}

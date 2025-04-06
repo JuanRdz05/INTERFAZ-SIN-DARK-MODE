@@ -1,0 +1,463 @@
+/* ===== ESTILOS BASE ===== */
+:root {
+    --color-primary: #4CAF50;
+    --color-secondary: #2196F3;
+    --color-dark: #2c3e50;
+    --color-light: #f5f9fa;
+    --text-color: #333;
+    --spacing: 1.5rem;
+}
+
+/* ===== ESTRUCTURA PRINCIPAL ===== */
+main {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background: linear-gradient(135deg, var(--color-light) 0%, #e6f2f5 100%);
+}
+
+#contenido {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin-top: 2rem;
+}
+
+.contenido-vacunacion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== ENCABEZADO ===== */
+.encab-vacunacion {
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.encab-vacunacion h1 {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin: 0 auto 0.5rem;
+    position: relative;
+    display: block;
+    width: fit-content;
+}
+
+.encab-vacunacion h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+}
+
+.encab-vacunacion h2 {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    font-weight: 400;
+    margin: 1rem auto 0;
+    position: relative;
+    display: block;
+    width: fit-content;
+    padding: 0 2rem;
+}
+
+.encab-vacunacion h2::before,
+.encab-vacunacion h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+    background: var(--color-primary);
+}
+
+.encab-vacunacion h2::before {
+    left: 0;
+}
+
+.encab-vacunacion h2::after {
+    right: 0;
+}
+
+/* ===== COMPONENTES ESPECÍFICOS PARA VACUNACIÓN ===== */
+
+/* Icono decorativo */
+.icono-decorativo {
+    text-align: center;
+    margin: 0 auto 2rem;
+}
+
+.icono-decorativo i {
+    font-size: 3.5rem;
+    color: var(--color-primary);
+    background: rgba(76, 175, 80, 0.1);
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.icono-decorativo:hover i {
+    color: var(--color-secondary);
+    transform: rotate(15deg);
+}
+
+/* Párrafo introductorio */
+.intro-vacunacion {
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+    background: rgba(76, 175, 80, 0.03);
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid var(--color-primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.intro-vacunacion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.15);
+    border-left-color: var(--color-secondary);
+}
+
+.icono-destacado {
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.intro-vacunacion:hover .icono-destacado {
+    color: var(--color-secondary);
+    transform: scale(1.1);
+}
+
+/* Texto resaltado */
+.resaltar-texto {
+    font-weight: 600;
+    color: var(--color-dark);
+    position: relative;
+}
+
+.resaltar-texto::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.intro-vacunacion:hover .resaltar-texto::after {
+    transform: scaleX(1);
+}
+
+/* Tarjetas de vacunación */
+.vacuna-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.8rem;
+    margin: 1.8rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.vacuna-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.15);
+    border-left-color: var(--color-secondary);
+}
+
+.vacuna-card h4 {
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.vacuna-card:hover h4 {
+    color: var(--color-secondary);
+}
+
+.vacuna-card h4 i {
+    margin-right: 12px;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.vacuna-card:hover h4 i {
+    color: var(--color-secondary);
+}
+
+/* Listas */
+.vacuna-card ul {
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.vacuna-card li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.8rem;
+    line-height: 1.7;
+}
+
+.vacuna-card li::before {
+    content: '•';
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+    transition: all 0.3s ease;
+}
+
+.vacuna-card:hover li::before {
+    color: var(--color-secondary);
+}
+
+.vacuna-card li b {
+    color: var(--color-dark);
+    transition: all 0.3s ease;
+}
+
+.vacuna-card:hover li b {
+    color: var(--color-secondary);
+}
+
+/* Preguntas frecuentes */
+.pregunta {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-left: 4px solid var(--color-primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pregunta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.15);
+    border-left-color: var(--color-secondary);
+}
+
+.pregunta b {
+    display: flex;
+    align-items: center;
+    color: var(--color-dark);
+    transition: all 0.3s ease;
+}
+
+.pregunta:hover b {
+    color: var(--color-secondary);
+}
+
+.pregunta b::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-right: 12px;
+    color: var(--color-primary);
+}
+
+.pregunta[data-tipo="edad"] b::before { content: '\f073'; } /* calendario */
+.pregunta[data-tipo="frecuencia"] b::before { content: '\f64f'; } /* reloj */
+.pregunta[data-tipo="seguridad"] b::before { content: '\f21e'; } /* escudo */
+
+.pregunta:hover b::before {
+    color: var(--color-secondary);
+}
+
+.pregunta p {
+    padding-left: 2rem;
+    margin-top: 0.8rem;
+    color: #555;
+}
+
+/* Botón de CTA */
+.centrar-boton {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.boton-consulta {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.boton-consulta:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.boton-consulta i {
+    transition: all 0.3s ease;
+}
+
+.boton-consulta:hover i {
+    transform: rotate(10deg);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem;
+    }
+    
+    #contenido {
+        padding: 1.5rem;
+    }
+    
+    .encab-vacunacion h1 {
+        font-size: 2rem;
+    }
+    
+    .encab-vacunacion h2 {
+        font-size: 1.2rem;
+        padding: 0 1.5rem;
+    }
+    
+    .encab-vacunacion h2::before,
+    .encab-vacunacion h2::after {
+        width: 20px;
+    }
+    
+    .intro-vacunacion {
+        padding-left: 3.5rem;
+    }
+    
+    .icono-destacado {
+        font-size: 1.5rem;
+        left: 1rem;
+    }
+    
+    .icono-decorativo i {
+        font-size: 2.5rem;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+/* ===== ANIMACIONES PARA LA PARTE SUPERIOR ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animación para el encabezado */
+.encab-vacunacion {
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+/* Animación para el icono decorativo */
+.icono-decorativo {
+    animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+/* Animación para el párrafo introductorio */
+.intro-vacunacion {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+/* Animación para la primera tarjeta de vacunación */
+.vacuna-card:first-child {
+    animation: fadeInUp 0.8s ease-out 0.7s both;
+}
+
+/* Animación para la primera pregunta frecuente */
+.pregunta:first-child {
+    animation: fadeInUp 0.8s ease-out 0.9s both;
+}
+
+/* Efecto para evitar parpadeo inicial */
+body.loaded * {
+    animation-play-state: running !important;
+}
+
+.vacuna-card:first-child {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.vacuna-card:nth-child(2) {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.vacuna-card h4:has(i.fa-shield-alt) {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+
+.vacuna-card:has(h4 i.fa-shield-alt) {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.icono-decorativo {
+    animation: float 3s ease-in-out infinite 0.5s both, fadeIn 0.8s ease-out 0.5s both;
+}

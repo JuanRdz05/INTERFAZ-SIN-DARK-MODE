@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Veterinaria Monterrey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/CSS INICIO/footer.css">
+    <link rel="stylesheet" href="CSS/CSS INICIO/botones.css">
+    <link rel="stylesheet" href="CSS/CSS INICIO/comentarios.css">
+    <link rel="stylesheet" href="CSS/CSS INICIO/sticky-header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="sticky-header" id="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html"><img src="IMAGENES/WEBP/logo-veterinaria-pequeño.webp" alt="Logo" class="logo"></a>
+            </div>
+            
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+                    <li><a href="#servicios">Nuestros servicios</a></li>
+                    <li><a href="#contacto">Agenda tu cita con nosotros</a></li>
+                </ul>
+            </nav>
+            
+            <button class="hamburguesa" aria-label="Menú" aria-expanded="false">
+                <span class="hamburguesa-linea"></span>
+                <span class="hamburguesa-linea"></span>
+                <span class="hamburguesa-linea"></span>
+            </button>
+        </div>
+        
+        <div class="menu-overlay"></div>
+    </header>
+
+    <div id="inicio"></div>
+    <main>
+        <section id="inicio-seccion">
+            <h1>Bienvenidos a nuestra Clínica Veterinaria</h1>
+            
+            <!-- Carrusel -->
+            <div class="Carrusel-caja"> 
+                <ul>
+                    <li>
+                        <img src="IMAGENES/WEBP/carrusel-1.webp" alt="Equipo veterinaria">
+                        <div class="texto-carrusel">
+                            <h2>Conoce nuestro equipo!</h2>
+                            <p>Profesionales altamente calificados para el cuidado de tu mascota con más de 30 años de experiencia en el sector.</p>
+                            <a href="#sobre-nosotros" class="boton-carrusel">Ver más</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="IMAGENES/WEBP/carrusel-2.webp" alt="Nuestros servicios">
+                        <div class="texto-carrusel">
+                            <h2>Conoce nuestros servicios!</h2>
+                            <p>Ofrecemos medicina preventiva, vacunación, chequeos geriátricos y más con tecnología de última generación.</p>
+                            <a href="#servicios" class="boton-carrusel">Ver servicios</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img loading="lazy" src="IMAGENES/WEBP/carrusel-3.webp" alt="Nuestro equipo" width="400" height="300">
+                        <div class="texto-carrusel">
+                            <h2>Agenda tu cita con nosotros!</h2>
+                            <p>Estamos disponibles para atender a tu mascota con cita previa en nuestro moderno centro veterinario.</p>
+                            <a href="#contacto" class="boton-carrusel">Contactar ahora</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros">
+            <div class="tarjeta">
+                <div class="tarjeta-contenido">
+                    <div class="tarjeta-imagen">
+                        <img loading="lazy" src="IMAGENES/WEBP/aboutUs-pequeño.webp" alt="Sobre nosotros">
+                    </div>
+                    <div class="tarjeta-texto">
+                        <h2>Sobre Nosotros</h2>
+                        <p>
+                            Contamos con casos de éxito desde 1991, respaldados por la confianza de miles de mascotas.<br>
+                            Proporcionar atención veterinaria integral y de calidad excepcional, promoviendo la salud, bienestar y felicidad de los animales. Nos comprometemos con tecnología innovadora y un equipo empático.
+                        </p>
+                        <a href="aboutUs.html"><input type="button" value="Más información"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <div class="tarjeta">
+                <div class="tarjeta-contenido">
+                    <div class="tarjeta-texto">
+                        <h2>Nuestros Servicios</h2>
+                        <p>La Clínica Veterinaria del Bosque ofrece programas de medicina preventiva, incluyendo vacunación para perros, gatos y hurones con biológicos de alta calidad y cadena de frío garantizada. También realizan chequeos geriátricos para detección temprana de enfermedades en mascotas mayores, promoviendo una vida más larga y saludable.</p>
+                        <a href="servicios.html"><input type="button" value="Más información"></a>
+                    </div>
+                    <div class="tarjeta-imagen imagen-servicios">
+                        <img loading="lazy" src="IMAGENES/WEBP/servicios-pequeño.webp" alt="Nuestros servicios">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonios">
+            <h2 class="titulo-seccion">Lo que dicen nuestros clientes <i class="fas fa-heart"></i></h2>
+            <div class="contenedor-testimonios">
+                <!-- Testimonio 1 -->
+                <div class="tarjeta-testimonio">
+                    <div class="tarjeta-testimonio-contenido">
+                        <div class="testimonio-imagen">
+                            <img loading="lazy" src="IMAGENES/WEBP/comantarios-pequeño.webp" alt="Cliente satisfecho" class="imagen-cliente">
+                            <div class="calificacion">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonio-texto">
+                            <blockquote>
+                                <i class="fas fa-quote-left"></i>
+                                Excelente atención, mi perro recibió el mejor cuidado posible. Los veterinarios fueron muy profesionales y cariñosos con mi mascota.
+                                <i class="fas fa-quote-right"></i>
+                            </blockquote>
+                            <div class="testimonio-autor">
+                                <span class="nombre">María González</span>
+                                <span class="mascota">Dueña de Toby</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Testimonio 2 -->
+                    <div class="tarjeta-testimonio">
+                        <div class="tarjeta-testimonio-contenido">
+                            <div class="testimonio-imagen">
+                                <img loading="lazy" src="IMAGENES/WEBP/dueño-2.webp" alt="Cliente satisfecho" class="imagen-cliente">
+                                <div class="calificacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonio-texto">
+                                <blockquote>
+                                    <i class="fas fa-quote-left"></i>
+                                    Esta clínica es excelente. El personal es muy amable y el ambiente es muy acogedor. Mi mascota siempre recibe una atención de primera y se siente muy tranquila aquí.
+                                    <i class="fas fa-quote-right"></i>
+                                </blockquote>
+                                <div class="testimonio-autor">
+                                    <span class="nombre">Alex García</span>
+                                    <span class="mascota">Dueño de Rocky</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 3 -->
+                    <div class="tarjeta-testimonio">
+                        <div class="tarjeta-testimonio-contenido">
+                            <div class="testimonio-imagen">
+                                <img loading="lazy" src="IMAGENES/WEBP/dueña3.webp" alt="Cliente satisfecho" class="imagen-cliente">
+                                <div class="calificacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonio-texto">
+                                <blockquote>
+                                    <i class="fas fa-quote-left"></i>
+                                    Los veterinarios fueron muy amables y se aseguraron de que se sintiera tranquila durante la revisión. ¡Se nota que aman a los gatos y saben cómo tratarlos!"
+                                    <i class="fas fa-quote-right"></i>
+                                </blockquote>
+                                <div class="testimonio-autor">
+                                    <span class="nombre">Eva Flores</span>
+                                    <span class="mascota">Dueña de Coco</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            </section>
+
+
+    </main>
+
+    <footer id="contacto">
+        <div class="footer-container">
+            <h2>Contáctanos</h2>
+            <div class="tarjeta-footer">
+                <div class="tarjeta-contenido-footer">
+                    <div class="tarjeta-texto-footer">
+                        <h3>Estamos para ayudarte</h3>
+                        <p>
+                            <i class="fas fa-phone-alt"></i> Teléfono: 55 1234 5678<br>
+                            <i class="fas fa-envelope"></i> Email: contacto@veterinariamonterrey.com<br>
+                            <i class="fas fa-map-marker-alt"></i> Dirección: Av. Bosque 123, CDMX
+                        </p>
+                        
+                        <a href="https://web.whatsapp.com/send?phone=5215512345678" 
+                        class="boton-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+                        </a>
+                    </div>
+                    <div class="tarjeta-imagen-footer">
+                        <img loading="lazy" src="IMAGENES/INICIO/contacto-imagen2-pequeño.jpg" alt="Nuestro equipo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2023 Veterinaria Monterrey. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="inicio.js"></script>
+    <script src="JAVASCRIPT/animaciones.js" defer></script>
+</body>
+</html>

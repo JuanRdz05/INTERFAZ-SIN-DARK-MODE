@@ -1,0 +1,173 @@
+/* ===== MENÚ HAMBURGUESA ===== */
+.hamburguesa {
+    display: none; /* Oculto por defecto en desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 12px 10px;
+    z-index: 1001;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hamburguesa-linea {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    
+    border-radius: 2px;
+}
+
+/* Estado activo del botón hamburguesa */
+.hamburguesa.active .hamburguesa-linea:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburguesa.active .hamburguesa-linea:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguesa.active .hamburguesa-linea:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Menú móvil */
+.menu {
+    display: flex;
+    transition: all 0.4s ease;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.menu li {
+    margin-left: 2rem;
+    position: relative;
+}
+
+/* Overlay para el menú móvil */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== RESPONSIVE - MENÚ HAMBURGUESA ===== */
+@media (max-width: 768px) {
+    .hamburguesa {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+    }
+    
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: linear-gradient(135deg, var(--color-dark) 0%, #34495e 100%);
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        padding-top: 90px;
+        flex-direction: column;
+        transition: right 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    
+    .menu.active {
+        right: 0;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        padding: 0 25px;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .menu li {
+        margin: 0 0 2rem 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.4s ease;
+    }
+    
+    .menu.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    /* Retrasos para la animación de los items */
+    .menu.active li:nth-child(1) { transition-delay: 0.1s; }
+    .menu.active li:nth-child(2) { transition-delay: 0.2s; }
+    .menu.active li:nth-child(3) { transition-delay: 0.3s; }
+    .menu.active li:nth-child(4) { transition-delay: 0.4s; }
+    
+    .menu a {
+        color: #ecf0f1;
+        font-size: 1.3rem;
+        padding: 0.8rem 1rem;
+        display: block;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        width: 100%;
+    }
+    
+    .menu a:hover {
+        color: var(--color-primary);
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateX(5px);
+    }
+    
+    .menu a::after {
+        display: none;
+    }
+    
+    /* Ajuste para el header en móvil */
+    .sticky-header {
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 5%;
+        height: 80px;
+    }
+    
+    .logo-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo {
+        height: 50px;
+    }
+    
+    .sticky-header.scrolled .logo {
+        height: 50px;
+    }
+}

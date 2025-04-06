@@ -1,0 +1,142 @@
+/* Estilos para la sección de testimonios */
+.testimonios {
+    padding: 4rem 5%;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden; /* Previene cualquier scroll no deseado */
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.titulo-seccion::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+.contenedor-testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-testimonio {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    width: 100%; /* Ocupa todo el espacio disponible */
+}
+
+.tarjeta-testimonio:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-testimonio-contenido {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonio-imagen {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.imagen-cliente {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.calificacion {
+    color: #f1c40f;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.testimonio-texto {
+    flex-grow: 1;
+}
+
+blockquote {
+    font-style: italic;
+    color: #34495e;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    position: relative;
+    padding: 0 1rem;
+}
+
+blockquote i.fa-quote-left {
+    position: absolute;
+    left: -5px;
+    top: -10px;
+    color: #3498db;
+    opacity: 0.3;
+    font-size: 2rem;
+}
+
+blockquote i.fa-quote-right {
+    position: absolute;
+    right: -5px;
+    bottom: -20px;
+    color: #3498db;
+    opacity: 0.3;
+    font-size: 2rem;
+}
+
+.testimonio-autor {
+    text-align: center;
+    font-weight: 600;
+}
+
+.nombre {
+    display: block;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.mascota {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Versión para tablet */
+@media (max-width: 1024px) {
+    .contenedor-testimonios {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+}
+
+/* Versión para móvil */
+@media (max-width: 768px) {
+    .contenedor-testimonios {
+        grid-template-columns: 1fr; /* 1 columna en móvil */
+        gap: 1.5rem;
+    }
+    
+    .tarjeta-testimonio {
+        max-width: 100%;
+    }
+}

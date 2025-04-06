@@ -1,0 +1,130 @@
+/* ===== ESTILOS DE BOTONES (COMPLETOS) ===== */
+
+/* Botón del Carrusel */
+.texto-carrusel .boton-carrusel {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 10px rgba(76, 175, 80, 0.3);
+    position: relative;
+    overflow: hidden;
+} 
+.texto-carrusel .boton-carrusel:hover {
+    background-color: #388E3C;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(56, 142, 60, 0.4);
+}
+
+.texto-carrusel .boton-carrusel:active {
+    transform: translateY(-1px);
+}
+
+  /* Botón "Más información" */
+.tarjeta-texto input[type="button"] {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: auto;
+    min-width: 200px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.tarjeta-texto input[type="button"]:hover {
+    background-color: #388E3C;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(56, 142, 60, 0.3);
+}
+
+.tarjeta-texto input[type="button"]:active {
+    transform: translateY(1px);
+}
+
+  /* Botón de WhatsApp */
+.boton-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+}
+
+.boton-whatsapp i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.boton-whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.boton-whatsapp:active {
+    transform: translateY(0);
+}
+
+  /* Efecto común para todos los botones */
+.boton-carrusel,
+input[type="button"],
+.boton-whatsapp {
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-carrusel:after,
+input[type="button"]:after,
+.boton-whatsapp:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.boton-carrusel:focus:not(:active)::after,
+input[type="button"]:focus:not(:active)::after,
+.boton-whatsapp:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+@keyframes ripple {
+    0% {  
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
