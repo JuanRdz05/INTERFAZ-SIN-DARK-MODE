@@ -13,7 +13,7 @@
     <header class="sticky-header" id="header">
         <div class="header-container">
             <div class="logo-container">
-                <a href="index.html"><img src="IMAGENES/INICIO/logo-veterinaria-pequeño.jpg" alt="Logo Veterinaria Monterrey" class="logo"></a>
+                <a href="index.html"><img src="IMAGENES/WEBP/logo-veterinaria-pequeño.webp" alt="Logo" class="logo"></a>
             </div>
             
             <nav class="menu">
@@ -21,7 +21,7 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="aboutUs.html">Sobre nosotros</a></li>
                     <li><a href="#">Nuestros servicios</a></li>
-                    <li><a href="#contacto">Agenda tu cita con nosotros</a></li>
+                    <li><a href="#contacto">Agenda tu cita</a></li>
                 </ul>
             </nav>
             
@@ -30,9 +30,20 @@
                 <span class="hamburguesa-linea"></span>
                 <span class="hamburguesa-linea"></span>
             </button>
+
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </label>
+            </div>
         </div>
         
         <div class="menu-overlay"></div>
+
     </header>
 
     <main>
@@ -162,5 +173,6 @@
     </footer>
 
     <script src="inicio.js"></script>
+    <script src="JAVASCRIPT/modo-oscuro.js"></script>
 </body>
 </html>

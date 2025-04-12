@@ -1,0 +1,148 @@
+/* ===== VARIABLES PARA MODO OSCURO ===== */
+:root {
+    /* Colores base */
+    --color-primary: #4CAF50;
+    --color-secondary: #2196F3;
+    --color-dark: #2c3e50;
+    --color-light: #f5f9fa;
+    --text-color: #333;
+    
+    /* Fondos */
+    --bg-color: #ffffff;
+    --card-bg: #f8f9fa;
+    --header-bg: rgb(255, 255, 255);
+    
+    /* Efectos */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    /* Colores base */
+    --color-primary: #81C784;
+    --color-secondary: #64B5F6;
+    --color-dark: #1a1a1a;
+    --color-light: #eceff1;
+    --text-color: #e0e0e0;
+    
+    /* Fondos */
+    --bg-color: #121212;
+    --card-bg: #2d2d2d;
+    --header-bg: rgb(30, 30, 30);
+    
+    /* Efectos */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== ESTILOS GENERALES MODO OSCURO ===== */
+[data-theme="dark"] body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: var(--color-light);
+}
+
+/* ===== SECCIÓN HERO ===== */
+[data-theme="dark"] .hero-about {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+/* ===== TARJETAS DESTACADAS ===== */
+[data-theme="dark"] .highlight-card,
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .timeline-item,
+[data-theme="dark"] .join-card,
+[data-theme="dark"] .community-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .feature-card .icon {
+    color: var(--color-primary);
+}
+
+/* ===== TIMELINE ===== */
+[data-theme="dark"] .timeline-year {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+[data-theme="dark"] .timeline-item::before {
+    background-color: var(--color-primary);
+}
+
+/* ===== SECCIÓN UNIRSE ===== */
+[data-theme="dark"] .join-history {
+    background-color: var(--color-dark);
+}
+
+[data-theme="dark"] .join-option {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .btn {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+}
+
+[data-theme="dark"] .btn-outline {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* ===== SECCIÓN COMUNIDAD ===== */
+[data-theme="dark"] .community {
+    background-color: var(--color-dark);
+}
+
+/* ===== FOOTER ===== */
+[data-theme="dark"] footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+[data-theme="dark"] .tarjeta-footer {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+/* ===== EFECTOS HOVER ===== */
+[data-theme="dark"] .feature-card:hover,
+[data-theme="dark"] .community-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== TEXTO ===== */
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .section-subtitle,
+[data-theme="dark"] .join-subtitle {
+    color: var(--color-light);
+    opacity: 0.8;
+}
+
+/* ===== LISTAS ===== */
+[data-theme="dark"] .timeline-features li::before {
+    color: var(--color-primary);
+}
+
+/* ===== ESTADÍSTICAS ===== */
+[data-theme="dark"] .stat-number {
+    color: var(--color-primary);
+}
+
+[data-theme="dark"] .stat-label {
+    color: var(--color-light);
+}

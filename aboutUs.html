@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nosotros - Veterinaria Monterrey</title>
     <link rel="stylesheet" href="CSS/CSS INICIO/sticky-header.css">
     <link rel="stylesheet" href="CSS/CSS INICIO/footer.css">
     <link rel="stylesheet" href="CSS/CSS INICIO/aboutUs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header class="sticky-header" id="header">
@@ -30,6 +30,16 @@
                 <span class="hamburguesa-linea"></span>
                 <span class="hamburguesa-linea"></span>
             </button>
+
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </label>
+            </div>
         </div>
         
         <div class="menu-overlay"></div>
@@ -246,5 +256,6 @@
     </footer>
 
     <script src="inicio.js"></script>
+    <script src="JAVASCRIPT/modo-oscuro-aboutUs.js"></script>
 </body>
 </html>

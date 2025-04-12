@@ -9,13 +9,21 @@
     <link rel="stylesheet" href="CSS/CSS INICIO/comentarios.css">
     <link rel="stylesheet" href="CSS/CSS INICIO/sticky-header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/modo-oscuro.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header class="sticky-header" id="header">
         <div class="header-container">
             <div class="logo-container">
-                <a href="index.html"><img src="IMAGENES/WEBP/logo-veterinaria-pequeño.webp" alt="Logo" class="logo"></a>
+                <a href="index.html">
+                    <img src="WEBP/logo-trasnparente.webp" 
+                        alt="Logo" 
+                        class="logo" 
+                        id="logo-imagen"
+                        data-light-src="WEBP/logo-trasnparente.webp"
+                        data-dark-src="WEBP/logo-oscuro-transparente.webp">
+                </a>
             </div>
             
             <nav class="menu">
@@ -23,7 +31,7 @@
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
                     <li><a href="#servicios">Nuestros servicios</a></li>
-                    <li><a href="#contacto">Agenda tu cita con nosotros</a></li>
+                    <li><a href="#contacto">Agenda tu cita</a></li>
                 </ul>
             </nav>
             
@@ -32,9 +40,20 @@
                 <span class="hamburguesa-linea"></span>
                 <span class="hamburguesa-linea"></span>
             </button>
+
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </label>
+            </div>
         </div>
         
         <div class="menu-overlay"></div>
+
     </header>
 
     <div id="inicio"></div>
@@ -106,7 +125,7 @@
             </div>
         </section>
         <section class="testimonios">
-            <h2 class="titulo-seccion">Lo que dicen nuestros clientes <i class="fas fa-heart"></i></h2>
+            <h2 class="h2-contenedor">Lo que dicen nuestros clientes <i class="fas fa-heart"></i></h2>
             <div class="contenedor-testimonios">
                 <!-- Testimonio 1 -->
                 <div class="tarjeta-testimonio">
@@ -225,5 +244,6 @@
 
     <script src="inicio.js"></script>
     <script src="JAVASCRIPT/animaciones.js" defer></script>
+    <script src="JAVASCRIPT/modo-oscuro.js"></script>
 </body>
 </html>
