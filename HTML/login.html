@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/CSS INICIO/sticky-header.css">
+    <link rel="stylesheet" href="../CSS/CSS INICIO/boton-agendar-cita.css">
+    <link rel="stylesheet" href="../CSS/CSS INICIO/footer.css">
+    <!-- <link rel="stylesheet" href="../CSS/modo-oscuro.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-header" id="header">
+        <div class="header-container">
+            <div class="header-container">
+                <div class="logo-container">
+                    <a href="../index.html">
+                        <img src="../WEBP/logo-trasnparente.webp" 
+                            alt="Logo" 
+                            class="logo" 
+                            id="logo-imagen"
+                            data-light-src="../WEBP/logo-trasnparente.webp"
+                            data-dark-src="../WEBP/logo-oscuro-transparente.webp">
+                    </a>
+                </div>
+            
+            <nav class="menu">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+                    <li><a href="../servicios.html">Nuestros servicios</a></li>
+                    <li><a href="#contacto">Agenda tu cita</a></li>
+                </ul>
+            </nav>
+            
+            <button class="hamburguesa" aria-label="Menú" aria-expanded="false">
+                <span class="hamburguesa-linea"></span>
+                <span class="hamburguesa-linea"></span>
+                <span class="hamburguesa-linea"></span>
+            </button>
+
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </label>
+            </div>
+        </div>
+        
+        <div class="menu-overlay"></div>
+    </header>
+
+    <main id="login">
+        <div class="login-container">
+            <h1>Iniciar Sesión</h1>
+            <form action="#" method="POST">
+                <label for="username">Nombre de Usuario:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </main>
+
+    <footer id="contacto">
+        <div class="footer-container">
+            <h2>Contáctanos</h2>
+            <div class="tarjeta-footer">
+                <div class="tarjeta-contenido-footer">
+                    <div class="tarjeta-texto-footer">
+                        <h3>Estamos para ayudarte</h3>
+                        <p>
+                            <i class="fas fa-phone-alt"></i> Teléfono: 55 1234 5678<br>
+                            <i class="fas fa-envelope"></i> Email: contacto@veterinariamonterrey.com<br>
+                            <i class="fas fa-map-marker-alt"></i> Dirección: Av. Bosque 123, CDMX
+                        </p>
+                        
+                        <a href="https://web.whatsapp.com/send?phone=5215512345678" 
+                        class="boton-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+                        </a>
+                    </div>
+                    <div class="tarjeta-imagen-footer">
+                        <img src="../IMAGENES/INICIO/contacto-imagen2-pequeño.jpg" alt="Nuestro equipo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2023 Veterinaria Monterrey. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="../inicio.js"></script>
+    <script src="../JAVASCRIPT/modo-oscuro.js"></script>
+    
+</body>
+</html>

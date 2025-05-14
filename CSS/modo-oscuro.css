@@ -239,3 +239,4 @@ input:checked + .slider .sun {
 [data-theme="dark"] .titulo-seccion i.fas.fa-heart {
     color: var(--color-primary) !important;
 }
+

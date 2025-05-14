@@ -1,22 +1,49 @@
-/* ===== FOOTER MEJORADO ===== */
+/* ===== FOOTER CON VERDES OSCUROS SOBRIOS ===== */
 footer {
-    background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%);
     color: #ffffff;
     padding: 3rem 5%;
     position: relative;
     overflow: hidden;
+    border-top: 4px solid var(--color-primary);
+    transition: all 0.3s ease;
 }
 
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #4CAF50, #2196F3);
+/* Variables para modo claro (verdes frescos) */
+:root {
+    --footer-bg-light: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+    --footer-text-light: #33691e;
+    --footer-border-light: #689f38;
+    --footer-card-bg-light: rgba(255, 255, 255, 0.85);
+    --footer-card-border-light: rgba(104, 159, 56, 0.3);
+    --footer-title-light: #2e7d32;
+    --footer-accent-light: #689f38;
+    --footer-shadow-light: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+/* Variables para modo oscuro (verdes muy oscuros) */
+[data-theme="dark"] {
+    --footer-bg-dark: #0a1e0a; /* Verde casi negro - color plano */
+    --footer-text-dark: #e8f5e9;
+    --footer-border-dark: #1b3e1b;
+    --footer-card-bg-dark: rgba(15, 32, 15, 0.9);
+    --footer-card-border-dark: rgba(46, 77, 46, 0.5);
+    --footer-title-dark: #c8e6c9;
+    --footer-accent-dark: #3a553a;
+    --footer-shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+/* Aplicación de estilos según el tema */
+body:not([data-theme="dark"]) footer {
+    background: var(--footer-bg-light);
+    color: var(--footer-text-light);
+    border-top-color: var(--footer-border-light);
+}
+
+[data-theme="dark"] footer {
+    background: var(--footer-bg-dark) !important; /* Fuerza la aplicación */
+    color: var(--footer-text-dark);
+    border-top-color: var(--footer-border-dark);
+}
+/* Contenedor principal */
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -24,13 +51,18 @@ footer::before {
     z-index: 1;
 }
 
+/* Título del footer - Solo el título será ligeramente más claro */
 .footer-container h2 {
-    color: #a5d6a7;
+    color: var(--footer-border-dark);
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
     position: relative;
     padding-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .footer-container h2 {
+    color: var(--footer-text-light);
 }
 
 .footer-container h2::after {
@@ -41,20 +73,40 @@ footer::before {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: #4CAF50;
+    background: var(--footer-accent-light);
 }
 
-/* Tarjeta del footer */
+[data-theme="dark"] .footer-container h2::after {
+    background: var(--footer-accent-dark);
+}
+
+/* Tarjeta del footer - Fondo sólido oscuro */
 .tarjeta-footer {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--footer-card-bg-light);
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--footer-shadow-light);
+    border: 1px solid var(--footer-card-border-light);
     margin-bottom: 2rem;
+    transition: all 0.3s ease;
 }
 
+[data-theme="dark"] .tarjeta-footer {
+    background: var(--footer-border-dark);
+    border: 1px solid var(--footer-card-border-dark);
+    box-shadow: var(--footer-shadow-dark);
+}
+
+.tarjeta-footer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .tarjeta-footer:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Contenido de la tarjeta */
 .tarjeta-contenido-footer {
     display: flex;
     align-items: center;
@@ -66,11 +118,15 @@ footer::before {
 }
 
 .tarjeta-texto-footer h3 {
-    color: #ffffff;
+    color: var(--footer-border-dark);
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     position: relative;
     padding-bottom: 0.5rem;
+}
+
+[data-theme="dark"] .tarjeta-texto-footer h3 {
+    color: var(--footer-text-dark);
 }
 
 .tarjeta-texto-footer h3::after {
@@ -80,53 +136,65 @@ footer::before {
     left: 0;
     width: 50px;
     height: 2px;
-    background: #4CAF50;
+    background: var(--footer-accent-light);
+}
+
+[data-theme="dark"] .tarjeta-texto-footer h3::after {
+    background: var(--footer-accent-dark);
 }
 
 .tarjeta-texto-footer p {
-    color: #ecf0f1;
+    color: var(--footer-text-light);
     line-height: 1.7;
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
 }
 
+[data-theme="dark"] .tarjeta-texto-footer p {
+    color: #cfd8dc;  /* Gris verdoso muy suave */
+}
+
 .tarjeta-texto-footer i {
-    color: #4CAF50;
+    color: var(--footer-accent-light);
     width: 20px;
     margin-right: 10px;
     text-align: center;
 }
 
+[data-theme="dark"] .tarjeta-texto-footer i {
+    color: #5d8c5d;  /* Verde apagado */
+}
+
+/* Imagen del footer */
 .tarjeta-imagen-footer {
     flex: 0 0 45%;
     max-width: 400px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 2px solid var(--footer-card-border-light);
 }
 
-.tarjeta-imagen-footer img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
+[data-theme="dark"] .tarjeta-imagen-footer {
+    border: 2px solid var(--footer-card-border-dark);
 }
 
 .tarjeta-imagen-footer:hover {
     transform: translateY(-5px);
+    border-color: var(--footer-accent-light);
 }
 
-.tarjeta-imagen-footer:hover img {
-    transform: scale(1.05);
+[data-theme="dark"] .tarjeta-imagen-footer:hover {
+    border-color: #3e5c3e;  /* Verde oscuro */
 }
 
-/* Botón WhatsApp mejorado */
+/* Botón WhatsApp (se mantiene igual pero más oscuro en modo oscuro) */
 .boton-whatsapp {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #25D366, #128C7E);
+    background: linear-gradient(135deg, #1e8449, #186a3b);  /* Verde más oscuro */
     color: white;
     padding: 12px 25px;
     border-radius: 7px;
@@ -134,39 +202,17 @@ footer::before {
     font-weight: 600;
     margin-top: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(30, 132, 73, 0.3);
     border: none;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.boton-whatsapp::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: 0.5s;
 }
 
 .boton-whatsapp:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 6px 20px rgba(30, 132, 73, 0.4);
 }
 
-.boton-whatsapp:hover::before {
-    left: 100%;
-}
-
-.boton-whatsapp i {
-    font-size: 1.3rem;
-    margin-right: 10px;
-}
-
-/* Copyright mejorado */
+/* Copyright */
 .copyright {
     text-align: center;
     padding-top: 2rem;
@@ -174,31 +220,11 @@ footer::before {
     border-top: 1px solid rgba(255,255,255,0.1);
     font-size: 0.9rem;
     color: rgba(255,255,255,0.7);
-    position: relative;
 }
 
-.copyright::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 2px;
-    background: #4CAF50;
-}
-
-/* Efecto de patrón decorativo */
-footer::after {
-    content: '';
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%234CAF50" opacity="0.05"><circle cx="25" cy="25" r="5"/><circle cx="75" cy="25" r="5"/><circle cx="25" cy="75" r="5"/><circle cx="75" cy="75" r="5"/></svg>');
-    background-size: 50px 50px;
-    z-index: 0;
+[data-theme="dark"] .copyright {
+    color: #b0bec5;  /* Gris verdoso claro */
+    border-top-color: rgba(46, 77, 46, 0.5);  /* Borde verde oscuro */
 }
 
 /* ===== VERSIÓN MÓVIL ===== */
@@ -209,12 +235,14 @@ footer::after {
     
     .tarjeta-contenido-footer {
         flex-direction: column;
+        gap: 2rem;
     }
     
     .tarjeta-imagen-footer {
         order: -1;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         max-width: 100%;
+        flex: 1 1 100%;
     }
     
     .tarjeta-texto-footer {
@@ -228,9 +256,6 @@ footer::after {
     
     .boton-whatsapp {
         width: 100%;
-    }
-    
-    footer::after {
-        display: none;
+        justify-content: center;
     }
 }
